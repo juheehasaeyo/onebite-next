@@ -5,7 +5,7 @@ import ReviewEditor from "@/components/review-editior";
 import Image from "next/image";
 
 export async function generateStaticParams() {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_SERVER_URL}/book}`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_SERVER_URL}/book`);
     if (!response.ok) {
         throw new Error(response.statusText);
     }
