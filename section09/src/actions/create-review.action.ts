@@ -7,8 +7,6 @@ export async function createReviewAction(_: any, formData: FormData) {
     const content = formData.get("content")?.toString();
     const author = formData.get("author")?.toString();
 
-    console.log(bookId, content, author);
-
     if (!bookId || !content || !author) {
         return {
             status: false,
